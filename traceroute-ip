@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "到IP：" $1 "路由转发路径："
+
+traceroute -T  $1 

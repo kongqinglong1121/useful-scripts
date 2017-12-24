@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "按小时统计" $1 "文件访问量"
+
+awk -F":" '{count[$2]++} END{for(i=0; i<24; i++){if(i<10){bb=0""i;}else{bb=i;} print bb"\t"count[bb]}}' $1
